@@ -9,6 +9,11 @@ export const categories = [
   { id: 'emotion', label: 'อารมณ์ความรู้สึก', emoji: '😊' },
   { id: 'color', label: 'สี', emoji: '🎨' },
   { id: 'number', label: 'ตัวเลข', emoji: '🔢' },
+  { id: 'tech', label: 'เทคโนโลยี', emoji: '💻' },
+  { id: 'shopping', label: 'การช้อปปิ้ง', emoji: '🛍️' },
+  { id: 'sports', label: 'กีฬา', emoji: '⚽' },
+  { id: 'health', label: 'สุขภาพ', emoji: '🏥' },
+  { id: 'animals', label: 'สัตว์', emoji: '🐾' },
 ]
 
 export const vocabulary = [
@@ -119,6 +124,66 @@ export const vocabulary = [
   { id: 88, english: 'double', thai: 'สองเท่า / คู่', pronunciation: '/ˈdʌbəl/', example: 'Double the recipe.', category: 'number', difficulty: 2 },
   { id: 89, english: 'half', thai: 'ครึ่ง', pronunciation: '/hæf/', example: 'Give me half.', category: 'number', difficulty: 1 },
   { id: 90, english: 'quarter', thai: 'หนึ่งในสี่', pronunciation: '/ˈkwɔːrtər/', example: 'A quarter of the pie.', category: 'number', difficulty: 2 },
+
+  // เทคโนโลยี
+  { id: 91, english: 'phone', thai: 'โทรศัพท์', pronunciation: '/foʊn/', example: 'I lost my phone.', category: 'tech', difficulty: 1 },
+  { id: 92, english: 'computer', thai: 'คอมพิวเตอร์', pronunciation: '/kəmˈpjuːtər/', example: 'I use a computer at work.', category: 'tech', difficulty: 1 },
+  { id: 93, english: 'internet', thai: 'อินเทอร์เน็ต', pronunciation: '/ˈɪntərnet/', example: 'The internet is slow today.', category: 'tech', difficulty: 1 },
+  { id: 94, english: 'password', thai: 'รหัสผ่าน', pronunciation: '/ˈpæswɜːrd/', example: 'Don\'t share your password.', category: 'tech', difficulty: 2 },
+  { id: 95, english: 'download', thai: 'ดาวน์โหลด', pronunciation: '/ˈdaʊnloʊd/', example: 'Download the app now.', category: 'tech', difficulty: 2 },
+  { id: 96, english: 'upload', thai: 'อัปโหลด', pronunciation: '/ˈʌploʊd/', example: 'Upload the file to the cloud.', category: 'tech', difficulty: 2 },
+  { id: 97, english: 'keyboard', thai: 'แป้นพิมพ์', pronunciation: '/ˈkiːbɔːrd/', example: 'My keyboard is broken.', category: 'tech', difficulty: 2 },
+  { id: 98, english: 'screen', thai: 'หน้าจอ', pronunciation: '/skriːn/', example: 'The screen is cracked.', category: 'tech', difficulty: 1 },
+  { id: 99, english: 'battery', thai: 'แบตเตอรี่', pronunciation: '/ˈbætəri/', example: 'My battery is low.', category: 'tech', difficulty: 1 },
+  { id: 100, english: 'charger', thai: 'ที่ชาร์จ', pronunciation: '/ˈtʃɑːrdʒər/', example: 'I forgot my charger.', category: 'tech', difficulty: 2 },
+
+  // การช้อปปิ้ง
+  { id: 101, english: 'price', thai: 'ราคา', pronunciation: '/praɪs/', example: 'What is the price?', category: 'shopping', difficulty: 1 },
+  { id: 102, english: 'discount', thai: 'ส่วนลด', pronunciation: '/ˈdɪskaʊnt/', example: 'There is a 50% discount today.', category: 'shopping', difficulty: 2 },
+  { id: 103, english: 'receipt', thai: 'ใบเสร็จ', pronunciation: '/rɪˈsiːt/', example: 'Can I have a receipt?', category: 'shopping', difficulty: 2 },
+  { id: 104, english: 'cashier', thai: 'แคชเชียร์', pronunciation: '/kæˈʃɪər/', example: 'Pay at the cashier.', category: 'shopping', difficulty: 2 },
+  { id: 105, english: 'wallet', thai: 'กระเป๋าสตางค์', pronunciation: '/ˈwɒlɪt/', example: 'I left my wallet at home.', category: 'shopping', difficulty: 1 },
+  { id: 106, english: 'change', thai: 'เงินทอน', pronunciation: '/tʃeɪndʒ/', example: 'Keep the change.', category: 'shopping', difficulty: 1 },
+  { id: 107, english: 'sale', thai: 'ลดราคา / ขาย', pronunciation: '/seɪl/', example: 'Everything is on sale.', category: 'shopping', difficulty: 1 },
+  { id: 108, english: 'refund', thai: 'คืนเงิน', pronunciation: '/ˈriːfʌnd/', example: 'I want a refund.', category: 'shopping', difficulty: 2 },
+  { id: 109, english: 'cart', thai: 'รถเข็น', pronunciation: '/kɑːrt/', example: 'Put it in the cart.', category: 'shopping', difficulty: 1 },
+  { id: 110, english: 'checkout', thai: 'ชำระเงิน', pronunciation: '/ˈtʃekaʊt/', example: 'Go to checkout.', category: 'shopping', difficulty: 2 },
+
+  // กีฬา
+  { id: 111, english: 'run', thai: 'วิ่ง', pronunciation: '/rʌn/', example: 'I run every morning.', category: 'sports', difficulty: 1 },
+  { id: 112, english: 'swim', thai: 'ว่ายน้ำ', pronunciation: '/swɪm/', example: 'She can swim very fast.', category: 'sports', difficulty: 1 },
+  { id: 113, english: 'team', thai: 'ทีม', pronunciation: '/tiːm/', example: 'Our team won the game.', category: 'sports', difficulty: 1 },
+  { id: 114, english: 'score', thai: 'คะแนน', pronunciation: '/skɔːr/', example: 'The score is 3-1.', category: 'sports', difficulty: 1 },
+  { id: 115, english: 'coach', thai: 'โค้ช', pronunciation: '/koʊtʃ/', example: 'The coach is strict.', category: 'sports', difficulty: 1 },
+  { id: 116, english: 'match', thai: 'การแข่งขัน', pronunciation: '/mætʃ/', example: 'The match starts at 8 pm.', category: 'sports', difficulty: 1 },
+  { id: 117, english: 'champion', thai: 'แชมป์ / ผู้ชนะเลิศ', pronunciation: '/ˈtʃæmpiən/', example: 'She is the world champion.', category: 'sports', difficulty: 2 },
+  { id: 118, english: 'exercise', thai: 'ออกกำลังกาย', pronunciation: '/ˈeksərsaɪz/', example: 'Exercise every day.', category: 'sports', difficulty: 2 },
+  { id: 119, english: 'stadium', thai: 'สนามกีฬา', pronunciation: '/ˈsteɪdiəm/', example: 'The stadium is full.', category: 'sports', difficulty: 2 },
+  { id: 120, english: 'trophy', thai: 'ถ้วยรางวัล', pronunciation: '/ˈtroʊfi/', example: 'They won a trophy.', category: 'sports', difficulty: 2 },
+
+  // สุขภาพ
+  { id: 121, english: 'doctor', thai: 'หมอ / แพทย์', pronunciation: '/ˈdɒktər/', example: 'I need to see a doctor.', category: 'health', difficulty: 1 },
+  { id: 122, english: 'hospital', thai: 'โรงพยาบาล', pronunciation: '/ˈhɒspɪtəl/', example: 'Take him to the hospital.', category: 'health', difficulty: 1 },
+  { id: 123, english: 'medicine', thai: 'ยา', pronunciation: '/ˈmedɪsɪn/', example: 'Take the medicine twice a day.', category: 'health', difficulty: 2 },
+  { id: 124, english: 'fever', thai: 'ไข้', pronunciation: '/ˈfiːvər/', example: 'I have a fever.', category: 'health', difficulty: 1 },
+  { id: 125, english: 'cough', thai: 'ไอ', pronunciation: '/kɒf/', example: 'I have a bad cough.', category: 'health', difficulty: 1 },
+  { id: 126, english: 'allergy', thai: 'ภูมิแพ้', pronunciation: '/ˈælərdʒi/', example: 'I have a food allergy.', category: 'health', difficulty: 3 },
+  { id: 127, english: 'healthy', thai: 'มีสุขภาพดี', pronunciation: '/ˈhelθi/', example: 'Eat healthy food.', category: 'health', difficulty: 1 },
+  { id: 128, english: 'nurse', thai: 'พยาบาล', pronunciation: '/nɜːrs/', example: 'The nurse is kind.', category: 'health', difficulty: 1 },
+  { id: 129, english: 'injection', thai: 'การฉีดยา', pronunciation: '/ɪnˈdʒekʃən/', example: 'I got an injection today.', category: 'health', difficulty: 3 },
+  { id: 130, english: 'vitamin', thai: 'วิตามิน', pronunciation: '/ˈvaɪtəmɪn/', example: 'Take your vitamins daily.', category: 'health', difficulty: 2 },
+
+  // สัตว์
+  { id: 131, english: 'cat', thai: 'แมว', pronunciation: '/kæt/', example: 'The cat is sleeping.', category: 'animals', difficulty: 1 },
+  { id: 132, english: 'dog', thai: 'สุนัข', pronunciation: '/dɒɡ/', example: 'My dog is very playful.', category: 'animals', difficulty: 1 },
+  { id: 133, english: 'elephant', thai: 'ช้าง', pronunciation: '/ˈelɪfənt/', example: 'The elephant is huge.', category: 'animals', difficulty: 2 },
+  { id: 134, english: 'bird', thai: 'นก', pronunciation: '/bɜːrd/', example: 'The bird is singing.', category: 'animals', difficulty: 1 },
+  { id: 135, english: 'fish', thai: 'ปลา', pronunciation: '/fɪʃ/', example: 'I caught a big fish.', category: 'animals', difficulty: 1 },
+  { id: 136, english: 'tiger', thai: 'เสือ', pronunciation: '/ˈtaɪɡər/', example: 'The tiger is dangerous.', category: 'animals', difficulty: 1 },
+  { id: 137, english: 'monkey', thai: 'ลิง', pronunciation: '/ˈmʌŋki/', example: 'The monkey is climbing.', category: 'animals', difficulty: 1 },
+  { id: 138, english: 'snake', thai: 'งู', pronunciation: '/sneɪk/', example: 'There is a snake in the garden.', category: 'animals', difficulty: 1 },
+  { id: 139, english: 'butterfly', thai: 'ผีเสื้อ', pronunciation: '/ˈbʌtərflaɪ/', example: 'A butterfly landed on the flower.', category: 'animals', difficulty: 2 },
+  { id: 140, english: 'crocodile', thai: 'จระเข้', pronunciation: '/ˈkrɒkədaɪl/', example: 'Don\'t swim near crocodiles.', category: 'animals', difficulty: 3 },
 ]
 
 export function getByCategory(categoryId) {
