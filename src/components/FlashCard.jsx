@@ -1,11 +1,18 @@
 import { useState } from 'react'
+import { useSpeech } from '../hooks/useSpeech'
 
 export default function FlashCard({ word, onCorrect, onWrong, wordProgress }) {
   const [flipped, setFlipped] = useState(false)
   const [answered, setAnswered] = useState(null) // 'correct' | 'wrong' | null
+  const { speak } = useSpeech()
 
   function handleFlip() {
     if (!answered) setFlipped(f => !f)
+  }
+
+  function handleSpeak(e) {
+    e.stopPropagation()
+    speak(word.english)
   }
 
   function handleCorrect() {
@@ -47,7 +54,14 @@ export default function FlashCard({ word, onCorrect, onWrong, wordProgress }) {
             <p className="text-xs text-gray-400 mb-2 uppercase tracking-wide">English</p>
             <h2 className="text-4xl font-bold text-gray-800 mb-2">{word.english}</h2>
             <p className="text-sm text-gray-400 font-mono">{word.pronunciation}</p>
-            <p className="text-xs text-purple-400 mt-3 animate-pulse">แตะเพื่อดูคำแปล</p>
+            <button
+              onClick={handleSpeak}
+              className="mt-2 text-purple-400 hover:text-purple-600 text-xl transition-colors"
+              title="ฟังการออกเสียง"
+            >
+              🔊
+            </button>
+            <p className="text-xs text-purple-400 mt-2 animate-pulse">แตะเพื่อดูคำแปล</p>
           </div>
 
           {/* Back - Thai */}

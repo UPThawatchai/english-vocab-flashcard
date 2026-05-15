@@ -3,6 +3,7 @@ import { vocabulary, categories, getByCategory, shuffleArray } from './data/voca
 import { useProgress } from './hooks/useProgress'
 import FlashCard from './components/FlashCard'
 import QuizMode from './components/QuizMode'
+import SpellingMode from './components/SpellingMode'
 import CategoryPicker from './components/CategoryPicker'
 import StatsPanel from './components/StatsPanel'
 import './index.css'
@@ -11,6 +12,7 @@ const MODES = {
   HOME: 'home',
   FLASHCARD: 'flashcard',
   QUIZ: 'quiz',
+  SPELLING: 'spelling',
   STATS: 'stats',
 }
 
@@ -42,6 +44,11 @@ export default function App() {
   function startQuiz() {
     setCurrentIndex(0)
     setMode(MODES.QUIZ)
+  }
+
+  function startSpelling() {
+    setCurrentIndex(0)
+    setMode(MODES.SPELLING)
   }
 
   function handleNext() {
@@ -86,6 +93,7 @@ export default function App() {
             { key: MODES.HOME, label: '🏠 หน้าหลัก' },
             { key: MODES.FLASHCARD, label: '📖 Flashcard' },
             { key: MODES.QUIZ, label: '✏️ ทดสอบ' },
+            { key: MODES.SPELLING, label: '⌨️ สะกด' },
             { key: MODES.STATS, label: '📊 สถิติ' },
           ].map(tab => (
             <button
@@ -93,6 +101,7 @@ export default function App() {
               onClick={() => {
                 if (tab.key === MODES.FLASHCARD) startFlashcard()
                 else if (tab.key === MODES.QUIZ) startQuiz()
+                else if (tab.key === MODES.SPELLING) startSpelling()
                 else setMode(tab.key)
               }}
               className={`px-3 py-1.5 rounded-xl text-sm font-medium transition-all
@@ -132,6 +141,14 @@ export default function App() {
                 <div className="text-3xl mb-2">✏️</div>
                 <h3 className="font-bold text-gray-800 text-lg">ทดสอบ 4 ตัวเลือก</h3>
                 <p className="text-gray-500 text-sm">ทดสอบความรู้ เลือกคำแปลที่ถูกต้อง</p>
+              </button>
+              <button
+                onClick={startSpelling}
+                className="bg-white rounded-2xl p-6 text-left transition-all shadow-xl active:scale-95 hover:shadow-2xl"
+              >
+                <div className="text-3xl mb-2">⌨️</div>
+                <h3 className="font-bold text-gray-800 text-lg">สะกดคำ</h3>
+                <p className="text-gray-500 text-sm">ดูคำแปลภาษาไทย แล้วพิมพ์คำภาษาอังกฤษ</p>
               </button>
             </div>
 
@@ -209,6 +226,25 @@ export default function App() {
               onCorrect={markCorrect}
               onWrong={markWrong}
               getWordProgress={getWordProgress}
+            />
+          </div>
+        )}
+
+        {/* SPELLING MODE */}
+        {mode === MODES.SPELLING && (
+          <div className="max-w-lg mx-auto">
+            <div className="mb-5">
+              <CategoryPicker
+                selected={category}
+                onSelect={handleCategoryChange}
+                wordCounts={wordCounts}
+              />
+            </div>
+            <SpellingMode
+              key={category + '-spelling-' + mode}
+              words={filteredWords}
+              onCorrect={markCorrect}
+              onWrong={markWrong}
             />
           </div>
         )}

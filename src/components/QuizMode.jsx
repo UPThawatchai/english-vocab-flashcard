@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { shuffleArray } from '../data/vocabulary'
+import { useSpeech } from '../hooks/useSpeech'
 
 function generateChoices(word, allWords) {
   const wrong = shuffleArray(allWords.filter(w => w.id !== word.id)).slice(0, 3)
@@ -14,6 +15,7 @@ export default function QuizMode({ words, onCorrect, onWrong, getWordProgress })
   const [score, setScore] = useState({ correct: 0, wrong: 0 })
   const [quizWords] = useState(() => shuffleArray(words))
   const [showEnglish, setShowEnglish] = useState(true) // true = show english, guess thai
+  const { speak } = useSpeech()
 
   const currentWord = quizWords[currentIndex]
 
@@ -90,7 +92,18 @@ export default function QuizMode({ words, onCorrect, onWrong, getWordProgress })
       <div className="w-full bg-white rounded-2xl shadow-2xl p-8 text-center">
         <p className="text-xs text-gray-400 mb-2 uppercase">{showEnglish ? 'คำภาษาอังกฤษ' : 'คำภาษาไทย'}</p>
         <h2 className="text-4xl font-bold text-gray-800 mb-1">{question}</h2>
-        {showEnglish && <p className="text-sm text-gray-400 font-mono">{currentWord.pronunciation}</p>}
+        {showEnglish && (
+          <>
+            <p className="text-sm text-gray-400 font-mono">{currentWord.pronunciation}</p>
+            <button
+              onClick={() => speak(currentWord.english)}
+              className="mt-1 text-purple-400 hover:text-purple-600 text-xl transition-colors"
+              title="ฟังการออกเสียง"
+            >
+              🔊
+            </button>
+          </>
+        )}
         <p className="text-sm text-gray-500 mt-2">"{currentWord.example}"</p>
       </div>
 
