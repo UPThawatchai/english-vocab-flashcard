@@ -58,9 +58,26 @@ npm run dev
 ## Build & Deploy
 
 ```bash
-npm run build
-# ได้ไฟล์ใน dist/ → deploy ขึ้น host ได้เลย
+npm run build   # ได้ไฟล์ใน dist/
 ```
+
+GitHub Actions deploy อัตโนมัติเมื่อ push ไป main
+
+**Live URL:** https://upthawatchai.github.io/english-vocab-flashcard/
+
+---
+
+## Progress Log
+
+| วันที่ | Phase | ทำอะไร |
+|--------|-------|---------|
+| 2026-05-14 | 1 | Flashcard, Quiz mode, 90 คำ, Stats, localStorage |
+| 2026-05-14 | 2 | +50 คำ ใน 5 หมวดใหม่ → รวม 140 คำ / 14 หมวด |
+| 2026-05-15 | 3 | Text-to-Speech (Web Speech API) ปุ่ม 🔊 ทุก mode |
+| 2026-05-15 | 4 | Spelling Mode — พิมพ์คำอังกฤษจากคำไทย + ใบ้ + เสียง |
+| 2026-05-15 | 5 | GitHub Pages deploy via GitHub Actions |
+
+**Deadline:** 2026-05-28
 
 ---
 
