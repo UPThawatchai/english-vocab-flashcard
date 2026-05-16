@@ -6,6 +6,7 @@ import QuizMode from './components/QuizMode'
 import SpellingMode from './components/SpellingMode'
 import CategoryPicker from './components/CategoryPicker'
 import StatsPanel from './components/StatsPanel'
+import Footer from './components/Footer'
 import './index.css'
 
 const MODES = {
@@ -284,6 +285,7 @@ export default function App() {
           </div>
         )}
       </main>
+      <Footer />
     </div>
   )
 }

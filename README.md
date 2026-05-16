@@ -76,6 +76,7 @@ GitHub Actions deploy อัตโนมัติเมื่อ push ไป mai
 | 2026-05-15 | 3 | Text-to-Speech (Web Speech API) ปุ่ม 🔊 ทุก mode |
 | 2026-05-15 | 4 | Spelling Mode — พิมพ์คำอังกฤษจากคำไทย + ใบ้ + เสียง |
 | 2026-05-15 | 5 | GitHub Pages deploy via GitHub Actions |
+| 2026-05-17 | 6 | เพิ่ม Footer + QR Code PromptPay |
 
 **Deadline:** 2026-05-28
 
@@ -90,7 +91,8 @@ src/
 │   ├── QuizMode.jsx       ← ทดสอบ 4 ตัวเลือก + เสียงออกเสียง
 │   ├── SpellingMode.jsx   ← พิมพ์คำอังกฤษจากคำไทย
 │   ├── CategoryPicker.jsx ← เลือกหมวดคำศัพท์
-│   └── StatsPanel.jsx     ← แสดงสถิติ
+│   ├── StatsPanel.jsx     ← แสดงสถิติ
+│   └── Footer.jsx         ← Footer UP-Thawatchai + QR Code PromptPay
 ├── hooks/
 │   ├── useProgress.js     ← บันทึก/อ่าน progress จาก localStorage
 │   └── useSpeech.js       ← Web Speech API (Text-to-Speech)
@@ -109,3 +111,6 @@ src/
 - [x] Phase 4: เพิ่มโหมด Spelling — ดูคำไทย พิมพ์คำอังกฤษ + ใบ้ + ฟังเสียงตอนตอบถูก
 - [ ] Phase 5: Deploy ขึ้น Netlify / Vercel
 - [ ] Push to GitHub (ต้องการ gh auth login ก่อน)
+
+- [x] Phase 5: เพิ่ม Footer + QR Code PromptPay (2026-05-17)
+
