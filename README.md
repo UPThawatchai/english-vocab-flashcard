@@ -109,8 +109,8 @@ src/
 - [x] Phase 2: เพิ่มหมวด tech, shopping, sports, health, animals (รวม 140 คำ)
 - [x] Phase 3: เพิ่มเสียงออกเสียง (Web Speech API — ปุ่ม 🔊 ใน Flashcard & Quiz)
 - [x] Phase 4: เพิ่มโหมด Spelling — ดูคำไทย พิมพ์คำอังกฤษ + ใบ้ + ฟังเสียงตอนตอบถูก
-- [ ] Phase 5: Deploy ขึ้น Netlify / Vercel
-- [ ] Push to GitHub (ต้องการ gh auth login ก่อน)
+- [x] Phase 5: Deploy ขึ้น GitHub Pages (เปลี่ยนจาก Netlify/Vercel — ใช้ GitHub Actions)
+- [x] Push to GitHub — https://github.com/UPThawatchai/english-vocab-flashcard
 
 - [x] Phase 5: เพิ่ม Footer + QR Code PromptPay (2026-05-17)
 
